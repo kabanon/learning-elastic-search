@@ -1,0 +1,1186 @@
+{
+	"info": {
+		"name": "Learning Elastic search",
+		"_postman_id": "c97c09e5-c52d-62ed-19a5-cc54c4387715",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Data",
+			"description": null,
+			"item": [
+				{
+					"name": "Index",
+					"description": "",
+					"item": [
+						{
+							"name": "Create index",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "127.0.0.1:9200/sample",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9200",
+									"path": [
+										"sample"
+									]
+								},
+								"description": null
+							},
+							"response": [
+								{
+									"id": "1d557445-141c-45f2-bb7a-512966198b31",
+									"name": "Create index - Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "73",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 147,
+									"body": "{\"acknowledged\":true,\"shards_acknowledged\":true,\"index\":\"sample\"}"
+								},
+								{
+									"id": "a159037e-9ca1-4777-b956-39ab9a61fbab",
+									"name": "Create index - Failed",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "173",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 45,
+									"body": "{\"error\":{\"root_cause\":[{\"type\":\"resource_already_exists_exception\",\"reason\":\"index [sample/pmuDZ4ohRLaDRT7hsST02w] already exists\",\"index_uuid\":\"pmuDZ4ohRLaDRT7hsST02w\",\"index\":\"sample\"}],\"type\":\"resource_already_exists_exception\",\"reason\":\"index [sample/pmuDZ4ohRLaDRT7hsST02w] already exists\",\"index_uuid\":\"pmuDZ4ohRLaDRT7hsST02w\",\"index\":\"sample\"},\"status\":400}"
+								}
+							]
+						},
+						{
+							"name": "Get index mapping",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "127.0.0.1:9200/sample",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9200",
+									"path": [
+										"sample"
+									]
+								},
+								"description": ""
+							},
+							"response": [
+								{
+									"id": "54cf5289-7bc5-472a-a2c7-95424baffe17",
+									"name": "Get index mapping",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "414",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 28,
+									"body": "{\"sample\":{\"aliases\":{},\"mappings\":{\"_doc\":{\"properties\":{\"area\":{\"type\":\"long\"},\"components\":{\"properties\":{\"city\":{\"properties\":{\"id_insee\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}},\"label\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}}}},\"country\":{\"properties\":{\"id\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}},\"label\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}}}},\"department\":{\"properties\":{\"id_insee\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}},\"label\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}}}},\"region\":{\"properties\":{\"id_insee\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}},\"label\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}}}}}},\"full_name\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}},\"geo_shape\":{\"properties\":{\"coordinates\":{\"type\":\"float\"},\"type\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}}}},\"geometry\":{\"properties\":{\"coordinates\":{\"type\":\"float\"},\"type\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}}}},\"keywords\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}},\"name\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}},\"population\":{\"type\":\"float\"},\"postal_code\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}},\"type\":{\"type\":\"text\",\"fields\":{\"keyword\":{\"type\":\"keyword\",\"ignore_above\":256}}},\"weight\":{\"type\":\"long\"}}}},\"settings\":{\"index\":{\"creation_date\":\"1518257117405\",\"number_of_shards\":\"5\",\"number_of_replicas\":\"1\",\"uuid\":\"5UfJV7jqSpKgY3duAQKQOw\",\"version\":{\"created\":\"6020199\"},\"provided_name\":\"sample\"}}}}"
+								}
+							]
+						},
+						{
+							"name": "Delete index",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "127.0.0.1:9200/datalist",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9200",
+									"path": [
+										"datalist"
+									]
+								},
+								"description": null
+							},
+							"response": [
+								{
+									"id": "e87839b6-49a8-4f9b-9d64-c77b26bfc219",
+									"name": "Delete index - Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "47",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 69,
+									"body": "{\"acknowledged\":true}"
+								},
+								{
+									"id": "7c284cf6-c848-4ca2-8e13-dec0c00e0ff8",
+									"name": "Delete index - Failed",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "156",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 18,
+									"body": "{\"error\":{\"root_cause\":[{\"type\":\"index_not_found_exception\",\"reason\":\"no such index\",\"resource.type\":\"index_or_alias\",\"resource.id\":\"sample\",\"index_uuid\":\"_na_\",\"index\":\"sample\"}],\"type\":\"index_not_found_exception\",\"reason\":\"no such index\",\"resource.type\":\"index_or_alias\",\"resource.id\":\"sample\",\"index_uuid\":\"_na_\",\"index\":\"sample\"},\"status\":404}"
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Document",
+					"description": "",
+					"item": [
+						{
+							"name": "Create document",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"population\" : 152.1,\n  \"type\" : \"city\",\n  \"full_name\" : \"Dijon\",\n  \"postal_code\" : [\n    \"21000\"\n  ],\n  \"geometry\" : {\n    \"coordinates\" : [\n      5.037888058772206,\n      47.32294379645076\n    ],\n    \"type\" : \"Point\"\n  },\n  \"area\" : 4159,\n  \"name\" : \"Dijon\",\n  \"geo_shape\" : {\n    \"coordinates\" : [\n      [\n        [\n          5.089575536565229,\n          47.28648720953707\n        ],\n        [\n          5.056214223938936,\n          47.30111378933174\n        ],\n        [\n          5.028706681122397,\n          47.29660892509514\n        ],\n        [\n          5.016140192974898,\n          47.30142966178079\n        ],\n        [\n          5.00203777698391,\n          47.300268971072114\n        ],\n        [\n          4.978519714321396,\n          47.30366203140548\n        ],\n        [\n          4.971696607583491,\n          47.30748828225883\n        ],\n        [\n          4.967544283080219,\n          47.315933533585444\n        ],\n        [\n          4.970724157808152,\n          47.31850909534242\n        ],\n        [\n          4.964275919494242,\n          47.32359820003732\n        ],\n        [\n          4.966400123893134,\n          47.326632980679\n        ],\n        [\n          4.994278957699485,\n          47.3305339989267\n        ],\n        [\n          5.010314023530682,\n          47.3236746862856\n        ],\n        [\n          5.017179347637073,\n          47.33931474240031\n        ],\n        [\n          5.024649884861583,\n          47.33506936329168\n        ],\n        [\n          5.038442192691176,\n          47.33757468571475\n        ],\n        [\n          5.0347008670533,\n          47.353849680405744\n        ],\n        [\n          5.039271224818588,\n          47.354859169783076\n        ],\n        [\n          5.036829731609577,\n          47.36768932903834\n        ],\n        [\n          5.041680050834943,\n          47.37253902532702\n        ],\n        [\n          5.051201895780872,\n          47.37749527824777\n        ],\n        [\n          5.055578365019143,\n          47.372348049114734\n        ],\n        [\n          5.055047862312534,\n          47.36300104032069\n        ],\n        [\n          5.06875348766261,\n          47.35341035234786\n        ],\n        [\n          5.082463517592104,\n          47.35020263595282\n        ],\n        [\n          5.069362815596588,\n          47.34069300469441\n        ],\n        [\n          5.074456094521768,\n          47.32165480508447\n        ],\n        [\n          5.088058456949833,\n          47.31861926169554\n        ],\n        [\n          5.083570599395527,\n          47.31353975968801\n        ],\n        [\n          5.085418542993923,\n          47.310660839422674\n        ],\n        [\n          5.101246127838603,\n          47.30502609290092\n        ],\n        [\n          5.096906405639799,\n          47.30170948505262\n        ],\n        [\n          5.089292649619458,\n          47.293165444847205\n        ],\n        [\n          5.089575536565229,\n          47.28648720953707\n        ]\n      ]\n    ],\n    \"type\" : \"Polygon\"\n  },\n  \"weight\" : 30,\n  \"components\" : {\n    \"country\" : {\n      \"label\" : \"France\",\n      \"id\" : \"FR\"\n    },\n    \"region\" : {\n      \"id_insee\" : \"27\",\n      \"label\" : \"Bourgogne-Franche-Comté\"\n    },\n    \"department\" : {\n      \"id_insee\" : \"21\",\n      \"label\" : \"Côte-d'Or\"\n    },\n    \"city\" : {\n      \"label\" : \"Dijon\",\n      \"id_insee\" : \"21231\"\n    }\n  },\n  \"keywords\" : [\n    \"dijon\",\n    \"21000\"\n  ]\n}"
+								},
+								"url": {
+									"raw": "127.0.0.1:9200/sample/_doc/21231",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9200",
+									"path": [
+										"sample",
+										"_doc",
+										"21231"
+									]
+								},
+								"description": null
+							},
+							"response": [
+								{
+									"id": "1cb7b6d3-f527-4f31-a775-6709eed409dc",
+									"name": "Create document",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"population\" : 152.1,\n  \"type\" : \"city\",\n  \"full_name\" : \"Dijon\",\n  \"postal_code\" : [\n    \"21000\"\n  ],\n  \"geometry\" : {\n    \"coordinates\" : [\n      5.037888058772206,\n      47.32294379645076\n    ],\n    \"type\" : \"Point\"\n  },\n  \"area\" : 4159,\n  \"name\" : \"Dijon\",\n  \"geo_shape\" : {\n    \"coordinates\" : [\n      [\n        [\n          5.089575536565229,\n          47.28648720953707\n        ],\n        [\n          5.056214223938936,\n          47.30111378933174\n        ],\n        [\n          5.028706681122397,\n          47.29660892509514\n        ],\n        [\n          5.016140192974898,\n          47.30142966178079\n        ],\n        [\n          5.00203777698391,\n          47.300268971072114\n        ],\n        [\n          4.978519714321396,\n          47.30366203140548\n        ],\n        [\n          4.971696607583491,\n          47.30748828225883\n        ],\n        [\n          4.967544283080219,\n          47.315933533585444\n        ],\n        [\n          4.970724157808152,\n          47.31850909534242\n        ],\n        [\n          4.964275919494242,\n          47.32359820003732\n        ],\n        [\n          4.966400123893134,\n          47.326632980679\n        ],\n        [\n          4.994278957699485,\n          47.3305339989267\n        ],\n        [\n          5.010314023530682,\n          47.3236746862856\n        ],\n        [\n          5.017179347637073,\n          47.33931474240031\n        ],\n        [\n          5.024649884861583,\n          47.33506936329168\n        ],\n        [\n          5.038442192691176,\n          47.33757468571475\n        ],\n        [\n          5.0347008670533,\n          47.353849680405744\n        ],\n        [\n          5.039271224818588,\n          47.354859169783076\n        ],\n        [\n          5.036829731609577,\n          47.36768932903834\n        ],\n        [\n          5.041680050834943,\n          47.37253902532702\n        ],\n        [\n          5.051201895780872,\n          47.37749527824777\n        ],\n        [\n          5.055578365019143,\n          47.372348049114734\n        ],\n        [\n          5.055047862312534,\n          47.36300104032069\n        ],\n        [\n          5.06875348766261,\n          47.35341035234786\n        ],\n        [\n          5.082463517592104,\n          47.35020263595282\n        ],\n        [\n          5.069362815596588,\n          47.34069300469441\n        ],\n        [\n          5.074456094521768,\n          47.32165480508447\n        ],\n        [\n          5.088058456949833,\n          47.31861926169554\n        ],\n        [\n          5.083570599395527,\n          47.31353975968801\n        ],\n        [\n          5.085418542993923,\n          47.310660839422674\n        ],\n        [\n          5.101246127838603,\n          47.30502609290092\n        ],\n        [\n          5.096906405639799,\n          47.30170948505262\n        ],\n        [\n          5.089292649619458,\n          47.293165444847205\n        ],\n        [\n          5.089575536565229,\n          47.28648720953707\n        ]\n      ]\n    ],\n    \"type\" : \"Polygon\"\n  },\n  \"weight\" : 30,\n  \"components\" : {\n    \"country\" : {\n      \"label\" : \"France\",\n      \"id\" : \"FR\"\n    },\n    \"region\" : {\n      \"id_insee\" : \"27\",\n      \"label\" : \"Bourgogne-Franche-Comté\"\n    },\n    \"department\" : {\n      \"id_insee\" : \"21\",\n      \"label\" : \"Côte-d'Or\"\n    },\n    \"city\" : {\n      \"label\" : \"Dijon\",\n      \"id_insee\" : \"21231\"\n    }\n  },\n  \"keywords\" : [\n    \"dijon\",\n    \"21000\"\n  ]\n}"
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample/_doc/21231",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample",
+												"_doc",
+												"21231"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "Location",
+											"value": "/sample/_doc/21231",
+											"name": "Location",
+											"description": "Used in redirection, or when a new resource has been created."
+										},
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "142",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 71,
+									"body": "{\"_index\":\"sample\",\"_type\":\"_doc\",\"_id\":\"21231\",\"_version\":1,\"result\":\"created\",\"_shards\":{\"total\":2,\"successful\":1,\"failed\":0},\"_seq_no\":0,\"_primary_term\":1}"
+								}
+							]
+						},
+						{
+							"name": "Get document",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "127.0.0.1:9200/sample/_doc/21231",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9200",
+									"path": [
+										"sample",
+										"_doc",
+										"21231"
+									]
+								},
+								"description": null
+							},
+							"response": [
+								{
+									"id": "7d0dbee2-8cea-4dc0-8b1c-9db68c0e5bc6",
+									"name": "Get document - Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample/_doc/21231",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample",
+												"_doc",
+												"21231"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "1153",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 59,
+									"body": "{\"_index\":\"sample\",\"_type\":\"_doc\",\"_id\":\"21231\",\"_version\":1,\"found\":true,\"_source\":{\n  \"population\" : 152.1,\n  \"type\" : \"city\",\n  \"full_name\" : \"Dijon\",\n  \"postal_code\" : [\n    \"21000\"\n  ],\n  \"geometry\" : {\n    \"coordinates\" : [\n      5.037888058772206,\n      47.32294379645076\n    ],\n    \"type\" : \"Point\"\n  },\n  \"area\" : 4159,\n  \"name\" : \"Dijon\",\n  \"geo_shape\" : {\n    \"coordinates\" : [\n      [\n        [\n          5.089575536565229,\n          47.28648720953707\n        ],\n        [\n          5.056214223938936,\n          47.30111378933174\n        ],\n        [\n          5.028706681122397,\n          47.29660892509514\n        ],\n        [\n          5.016140192974898,\n          47.30142966178079\n        ],\n        [\n          5.00203777698391,\n          47.300268971072114\n        ],\n        [\n          4.978519714321396,\n          47.30366203140548\n        ],\n        [\n          4.971696607583491,\n          47.30748828225883\n        ],\n        [\n          4.967544283080219,\n          47.315933533585444\n        ],\n        [\n          4.970724157808152,\n          47.31850909534242\n        ],\n        [\n          4.964275919494242,\n          47.32359820003732\n        ],\n        [\n          4.966400123893134,\n          47.326632980679\n        ],\n        [\n          4.994278957699485,\n          47.3305339989267\n        ],\n        [\n          5.010314023530682,\n          47.3236746862856\n        ],\n        [\n          5.017179347637073,\n          47.33931474240031\n        ],\n        [\n          5.024649884861583,\n          47.33506936329168\n        ],\n        [\n          5.038442192691176,\n          47.33757468571475\n        ],\n        [\n          5.0347008670533,\n          47.353849680405744\n        ],\n        [\n          5.039271224818588,\n          47.354859169783076\n        ],\n        [\n          5.036829731609577,\n          47.36768932903834\n        ],\n        [\n          5.041680050834943,\n          47.37253902532702\n        ],\n        [\n          5.051201895780872,\n          47.37749527824777\n        ],\n        [\n          5.055578365019143,\n          47.372348049114734\n        ],\n        [\n          5.055047862312534,\n          47.36300104032069\n        ],\n        [\n          5.06875348766261,\n          47.35341035234786\n        ],\n        [\n          5.082463517592104,\n          47.35020263595282\n        ],\n        [\n          5.069362815596588,\n          47.34069300469441\n        ],\n        [\n          5.074456094521768,\n          47.32165480508447\n        ],\n        [\n          5.088058456949833,\n          47.31861926169554\n        ],\n        [\n          5.083570599395527,\n          47.31353975968801\n        ],\n        [\n          5.085418542993923,\n          47.310660839422674\n        ],\n        [\n          5.101246127838603,\n          47.30502609290092\n        ],\n        [\n          5.096906405639799,\n          47.30170948505262\n        ],\n        [\n          5.089292649619458,\n          47.293165444847205\n        ],\n        [\n          5.089575536565229,\n          47.28648720953707\n        ]\n      ]\n    ],\n    \"type\" : \"Polygon\"\n  },\n  \"weight\" : 30,\n  \"components\" : {\n    \"country\" : {\n      \"label\" : \"France\",\n      \"id\" : \"FR\"\n    },\n    \"region\" : {\n      \"id_insee\" : \"27\",\n      \"label\" : \"Bourgogne-Franche-Comté\"\n    },\n    \"department\" : {\n      \"id_insee\" : \"21\",\n      \"label\" : \"Côte-d'Or\"\n    },\n    \"city\" : {\n      \"label\" : \"Dijon\",\n      \"id_insee\" : \"21231\"\n    }\n  },\n  \"keywords\" : [\n    \"dijon\",\n    \"21000\"\n  ]\n}}"
+								},
+								{
+									"id": "0fc1177e-2cd3-4bb3-afb1-4036a72c0771",
+									"name": "Get document - Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample/_doc/21230",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample",
+												"_doc",
+												"21230"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "81",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 20,
+									"body": "{\"_index\":\"sample\",\"_type\":\"_doc\",\"_id\":\"21230\",\"found\":false}"
+								}
+							]
+						},
+						{
+							"name": "Update document - Full",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"full_name\" : \"Dijon City\"\n}\n"
+								},
+								"url": {
+									"raw": "127.0.0.1:9200/datalist/location/21231",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9200",
+									"path": [
+										"datalist",
+										"location",
+										"21231"
+									]
+								},
+								"description": null
+							},
+							"response": [
+								{
+									"id": "2f659dec-039f-4fe8-9403-5777b5e4dc4c",
+									"name": "Update document - Full - Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"full_name\" : \"Dijon City\"\n}\n"
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample/_doc/21231",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample",
+												"_doc",
+												"21231"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "145",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 39,
+									"body": "{\"_index\":\"sample\",\"_type\":\"_doc\",\"_id\":\"21231\",\"_version\":5,\"result\":\"updated\",\"_shards\":{\"total\":2,\"successful\":1,\"failed\":0},\"_seq_no\":4,\"_primary_term\":1}"
+								}
+							]
+						},
+						{
+							"name": "Update document - Partial",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"doc\": {\n    \"full_name\" : \"Dijon City\",\n    \"components\" : {\n      \"city\" : {\n        \"label\" : \"Dijon City\"\n      }\n    },\n    \"new_field\": \"Cité de la gastronomie\"\n    \n  }\n}"
+								},
+								"url": {
+									"raw": "127.0.0.1:9200/sample/_doc/21231/_update",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9200",
+									"path": [
+										"sample",
+										"_doc",
+										"21231",
+										"_update"
+									]
+								},
+								"description": null
+							},
+							"response": [
+								{
+									"id": "3ed88805-b67e-4a78-9fda-1003ee7742a7",
+									"name": "Update document - Partial",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"doc\": {\n    \"full_name\" : \"Dijon City\",\n    \"components\" : {\n      \"city\" : {\n        \"label\" : \"Dijon City\"\n      }\n    },\n    \"new_field\": \"Cité de la gastronomie\"\n    \n  }\n}"
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample/_doc/21231/_update",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample",
+												"_doc",
+												"21231",
+												"_update"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "145",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 86,
+									"body": "{\"_index\":\"sample\",\"_type\":\"_doc\",\"_id\":\"21231\",\"_version\":6,\"result\":\"updated\",\"_shards\":{\"total\":2,\"successful\":1,\"failed\":0},\"_seq_no\":5,\"_primary_term\":1}"
+								}
+							]
+						},
+						{
+							"name": "Update document - Partial - Script",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"doc\": {\n\t\t\"script\" : {\n\t        \"source\": \"ctx._source.population += params.counter\",\n\t        \"lang\": \"painless\",\n\t        \"params\" : {\n\t            \"counter\" : 40\n\t        }\n    \t}\n\t}\n}"
+								},
+								"url": {
+									"raw": "127.0.0.1:9200/sample/_doc/21231/_update",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9200",
+									"path": [
+										"sample",
+										"_doc",
+										"21231",
+										"_update"
+									]
+								},
+								"description": null
+							},
+							"response": [
+								{
+									"id": "96ae9ef0-0764-4d6a-8254-c62d7c6bd81d",
+									"name": "Update document - Partial - Script",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"doc\": {\n\t\t\"script\" : {\n\t        \"source\": \"ctx._source.population += params.counter\",\n\t        \"lang\": \"painless\",\n\t        \"params\" : {\n\t            \"counter\" : 40\n\t        }\n    \t}\n\t}\n}"
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample/_doc/21231/_update",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample",
+												"_doc",
+												"21231",
+												"_update"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "145",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 63,
+									"body": "{\"_index\":\"sample\",\"_type\":\"_doc\",\"_id\":\"21231\",\"_version\":7,\"result\":\"updated\",\"_shards\":{\"total\":2,\"successful\":1,\"failed\":0},\"_seq_no\":6,\"_primary_term\":1}"
+								}
+							]
+						},
+						{
+							"name": "Delete document",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "127.0.0.1:9200/datalist/location/21231",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9200",
+									"path": [
+										"datalist",
+										"location",
+										"21231"
+									]
+								},
+								"description": null
+							},
+							"response": [
+								{
+									"id": "a6ab10d7-7df1-4b44-99ed-12663e1a1acb",
+									"name": "Delete document - Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample/_doc/21231",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample",
+												"_doc",
+												"21231"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "145",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 37,
+									"body": "{\"_index\":\"sample\",\"_type\":\"_doc\",\"_id\":\"21231\",\"_version\":8,\"result\":\"deleted\",\"_shards\":{\"total\":2,\"successful\":1,\"failed\":0},\"_seq_no\":7,\"_primary_term\":1}"
+								}
+							]
+						},
+						{
+							"name": "Bulk - Index, update & delete",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"index\":{\"_id\":\"21540\"}}\n{\"population\" : 6.2, \"type\" : \"city\", \"full_name\" : \"Saint-Apollinaire\", \"postal_code\" : [ \"21850\" ], \"geometry\" : { \"coordinates\" : [ 5.093225846575239, 47.33603034500961 ], \"type\" : \"Point\" }, \"area\" : 1023, \"name\" : \"Saint-Apollinaire\", \"geo_shape\" : { \"coordinates\" : [ [ [ 5.088058456949833, 47.31861926169554 ], [ 5.074456094521768, 47.32165480508447 ], [ 5.069362815596588, 47.34069300469441 ], [ 5.082463517592104, 47.35020263595282 ], [ 5.103531659882708, 47.355595482293936 ], [ 5.118919864012565, 47.33619722148217 ], [ 5.109475551563838, 47.32510328583809 ], [ 5.097767992176658, 47.31902056754936 ], [ 5.088058456949833, 47.31861926169554 ] ] ], \"type\" : \"Polygon\" }, \"weight\" : 30, \"components\" : { \"country\" : { \"label\" : \"France\", \"id\" : \"FR\" }, \"region\" : { \"id_insee\" : \"27\", \"label\" : \"Bourgogne-Franche-Comté\"}, \"department\" : { \"id_insee\" : \"21\", \"label\" : \"Côte-d'Or\"}, \"city\" : {\"label\" : \"Saint-Apollinaire\", \"id_insee\" : \"21540\" } }, \"keywords\" : [ \"saint\", \"apollinaire\", \"21850\" ] }\n{\"update\":{\"_id\":\"21540\"}}\n{\"doc\": { \"full_name\": \"Saint-Apollinaire City\" } }\n{\"delete\":{\"_id\":\"21540\"}}\n"
+								},
+								"url": {
+									"raw": "127.0.0.1:9200/sample/_doc/_bulk",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9200",
+									"path": [
+										"sample",
+										"_doc",
+										"_bulk"
+									]
+								},
+								"description": null
+							},
+							"response": [
+								{
+									"id": "0f9c7f4a-84ae-4161-b5a4-6b5da97e2430",
+									"name": "Bulk - Index, update & delete - Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"index\":{\"_id\":\"21540\"}}\n{\"population\" : 6.2, \"type\" : \"city\", \"full_name\" : \"Saint-Apollinaire\", \"postal_code\" : [ \"21850\" ], \"geometry\" : { \"coordinates\" : [ 5.093225846575239, 47.33603034500961 ], \"type\" : \"Point\" }, \"area\" : 1023, \"name\" : \"Saint-Apollinaire\", \"geo_shape\" : { \"coordinates\" : [ [ [ 5.088058456949833, 47.31861926169554 ], [ 5.074456094521768, 47.32165480508447 ], [ 5.069362815596588, 47.34069300469441 ], [ 5.082463517592104, 47.35020263595282 ], [ 5.103531659882708, 47.355595482293936 ], [ 5.118919864012565, 47.33619722148217 ], [ 5.109475551563838, 47.32510328583809 ], [ 5.097767992176658, 47.31902056754936 ], [ 5.088058456949833, 47.31861926169554 ] ] ], \"type\" : \"Polygon\" }, \"weight\" : 30, \"components\" : { \"country\" : { \"label\" : \"France\", \"id\" : \"FR\" }, \"region\" : { \"id_insee\" : \"27\", \"label\" : \"Bourgogne-Franche-Comté\"}, \"department\" : { \"id_insee\" : \"21\", \"label\" : \"Côte-d'Or\"}, \"city\" : {\"label\" : \"Saint-Apollinaire\", \"id_insee\" : \"21540\" } }, \"keywords\" : [ \"saint\", \"apollinaire\", \"21850\" ] }\n{\"update\":{\"_id\":\"21540\"}}\n{\"doc\": { \"full_name\": \"Saint-Apollinaire City\" } }\n{\"delete\":{\"_id\":\"21540\"}}\n"
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample/_doc/_bulk",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample",
+												"_doc",
+												"_bulk"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "226",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 48,
+									"body": "{\"took\":21,\"errors\":false,\"items\":[{\"index\":{\"_index\":\"sample\",\"_type\":\"_doc\",\"_id\":\"21540\",\"_version\":1,\"result\":\"created\",\"_shards\":{\"total\":2,\"successful\":1,\"failed\":0},\"_seq_no\":0,\"_primary_term\":1,\"status\":201}},{\"update\":{\"_index\":\"sample\",\"_type\":\"_doc\",\"_id\":\"21540\",\"_version\":2,\"result\":\"updated\",\"_shards\":{\"total\":2,\"successful\":1,\"failed\":0},\"_seq_no\":1,\"_primary_term\":1,\"status\":200}},{\"delete\":{\"_index\":\"sample\",\"_type\":\"_doc\",\"_id\":\"21540\",\"_version\":3,\"result\":\"deleted\",\"_shards\":{\"total\":2,\"successful\":1,\"failed\":0},\"_seq_no\":2,\"_primary_term\":1,\"status\":200}}]}"
+								},
+								{
+									"id": "a2a854c2-db55-4113-9244-18fb8bbe14e2",
+									"name": "Bulk - Index, update & delete - Failed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"disabled": false
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"index\":{\"_id\":\"21540\"}}\n{\"population\" : 6.2, \"type\" : \"city\", \"full_name\" : \"Saint-Apollinaire\", \"postal_code\" : [ \"21850\" ], \"geometry\" : { \"coordinates\" : [ 5.093225846575239, 47.33603034500961 ], \"type\" : \"Point\" }, \"area\" : 1023, \"name\" : \"Saint-Apollinaire\", \"geo_shape\" : { \"coordinates\" : [ [ [ 5.088058456949833, 47.31861926169554 ], [ 5.074456094521768, 47.32165480508447 ], [ 5.069362815596588, 47.34069300469441 ], [ 5.082463517592104, 47.35020263595282 ], [ 5.103531659882708, 47.355595482293936 ], [ 5.118919864012565, 47.33619722148217 ], [ 5.109475551563838, 47.32510328583809 ], [ 5.097767992176658, 47.31902056754936 ], [ 5.088058456949833, 47.31861926169554 ] ] ], \"type\" : \"Polygon\" }, \"weight\" : 30, \"components\" : { \"country\" : { \"label\" : \"France\", \"id\" : \"FR\" }, \"region\" : { \"id_insee\" : \"27\", \"label\" : \"Bourgogne-Franche-Comté\"}, \"department\" : { \"id_insee\" : \"21\", \"label\" : \"Côte-d'Or\"}, \"city\" : {\"label\" : \"Saint-Apollinaire\", \"id_insee\" : \"21540\" } }, \"keywords\" : [ \"saint\", \"apollinaire\", \"21850\" ] }\n{\"update\":{\"_id\":\"21540\"}}\n{\"doc\": { \"full_name\": \"Saint-Apollinaire City\" } }\n{\"delete\":{\"_id\":\"21540\"}}"
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample/_doc/_bulk",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample",
+												"_doc",
+												"_bulk"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "148",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 23,
+									"body": "{\"error\":{\"root_cause\":[{\"type\":\"illegal_argument_exception\",\"reason\":\"The bulk request must be terminated by a newline [\\n]\"}],\"type\":\"illegal_argument_exception\",\"reason\":\"The bulk request must be terminated by a newline [\\n]\"},\"status\":400}"
+								},
+								{
+									"id": "8022b895-442d-4390-a24d-429d8b540567",
+									"name": "Bulk - Index, update & delete - Failed #2",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"disabled": false
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"index\":{\"_id\":\"21540\"}}\n{\"population\" : 6.2, \"type\" : \"city\", \"full_name\" : \"Saint-Apollinaire\", \"postal_code\" : [ \"21850\" ], \"geometry\" : { \"coordinates\" : [ 5.093225846575239, 47.33603034500961 ], \"type\" : \"Point\" }, \"area\" : 1023, \"name\" : \"Saint-Apollinaire\", \"geo_shape\" : { \"coordinates\" : [ [ [ 5.088058456949833, 47.31861926169554 ], [ 5.074456094521768, 47.32165480508447 ], [ 5.069362815596588, 47.34069300469441 ], [ 5.082463517592104, 47.35020263595282 ], [ 5.103531659882708, 47.355595482293936 ], [ 5.118919864012565, 47.33619722148217 ], [ 5.109475551563838, 47.32510328583809 ], [ 5.097767992176658, 47.31902056754936 ], [ 5.088058456949833, 47.31861926169554 ] ] ], \"type\" : \"Polygon\" }, \"weight\" : 30, \"components\" : { \"country\" : { \"label\" : \"France\", \"id\" : \"FR\" }, \"region\" : { \"id_insee\" : \"27\", \"label\" : \"Bourgogne-Franche-Comté\"}, \"department\" : { \"id_insee\" : \"21\", \"label\" : \"Côte-d'Or\"}, \"city\" : {\"label\" : \"Saint-Apollinaire\", \"id_insee\" : \"21540\" } }, \"keywords\" : [ \"saint\", \"apollinaire\", \"21850\" ] }\n{\"update\":{\"_id\":\"21540\"}}\n{\"doc\": { \"full_name: \"Saint-Apollinaire City\" } }\n{\"delete\":{\"_id\":\"21540\"}}\n"
+										},
+										"url": {
+											"raw": "127.0.0.1:9200/sample/_doc/_bulk",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "9200",
+											"path": [
+												"sample",
+												"_doc",
+												"_bulk"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "text",
+									"header": [
+										{
+											"key": "content-encoding",
+											"value": "gzip",
+											"name": "content-encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "content-length",
+											"value": "246",
+											"name": "content-length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=UTF-8",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										}
+									],
+									"cookie": [],
+									"responseTime": 31,
+									"body": "{\"error\":{\"root_cause\":[{\"type\":\"json_parse_exception\",\"reason\":\"Unexpected character ('S' (code 83)): was expecting a colon to separate field name and value\\n at [Source: org.elasticsearch.transport.netty4.ByteBufStreamInput@576ed4c4; line: 1, column: 25]\"}],\"type\":\"json_parse_exception\",\"reason\":\"Unexpected character ('S' (code 83)): was expecting a colon to separate field name and value\\n at [Source: org.elasticsearch.transport.netty4.ByteBufStreamInput@576ed4c4; line: 1, column: 25]\"},\"status\":500}"
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
