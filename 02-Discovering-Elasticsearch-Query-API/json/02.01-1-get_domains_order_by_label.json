@@ -1,0 +1,32 @@
+{
+  "size": 100,
+  "sort": [
+    {
+      "label": "asc"
+    }
+  ],
+  "query": {
+		"bool" : {
+      "must": [
+        {
+          "term": {
+            "family": "a"
+          }
+        },
+        {
+          "exists" : {
+            "field" : "domain"
+          }
+        }
+      ],
+      "must_not" : [
+          {
+            "exists" : {
+              "field" : "card"
+            }
+          }
+        ]
+			}
+		}
+	}
+}

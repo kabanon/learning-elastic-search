@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "label": {
+      "type":     "text",
+      "fielddata": true
+    }
+  }
+}

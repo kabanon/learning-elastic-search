@@ -1,0 +1,32 @@
+{
+  "size": 10,
+  "query": {
+		"bool" : {
+      "must": [
+        {
+          "exists" : {
+            "field" : "id_ogr"
+          }
+        },
+        {
+          "term": {
+            "label": "web"
+          }
+        }
+      ],
+      "should": [
+        {
+          "term": {
+            "label": "developpeur"
+          }
+        },
+        {
+          "term": {
+            "label": "designer"
+          }
+        }
+      ],
+      "minimum_should_match": 1
+		}
+	}
+}

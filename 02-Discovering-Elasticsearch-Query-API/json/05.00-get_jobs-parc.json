@@ -1,0 +1,34 @@
+{
+  "size": 100,
+  "query": {
+		"bool" : {
+      "must": [
+        {
+          "term": {
+            "family": "a"
+          }
+        },
+        {
+          "term": {
+            "domain": "12"
+          }
+        },
+        {
+          "term" : {
+            "card" : "04"
+          }
+        },
+        {
+          "exists" : {
+            "field" : "id_ogr"
+          }
+        },
+        {
+          "match": {
+            "label": "parc"
+          }
+        }
+      ]
+		}
+	}
+}

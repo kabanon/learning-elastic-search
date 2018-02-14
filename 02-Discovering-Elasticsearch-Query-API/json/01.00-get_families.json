@@ -1,0 +1,20 @@
+{
+  "size": 100,
+  "sort": [
+    {
+      "_id": "asc"
+    }
+  ],
+  "query": {
+		"bool" : {
+      "must_not" : [
+        {
+          "exists" : {
+            "field" : "domain"
+          }
+        }
+        ]
+			}
+		}
+	}
+}

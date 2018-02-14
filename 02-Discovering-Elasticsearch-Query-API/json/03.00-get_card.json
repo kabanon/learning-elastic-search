@@ -1,0 +1,37 @@
+{
+  "size": 100,
+  "sort": [
+    {
+      "_id": "asc"
+    }
+  ],
+  "query": {
+		"bool" : {
+      "must": [
+        {
+          "term": {
+            "family": "a"
+          }
+        },
+        {
+          "term": {
+            "domain": "12"
+          }
+        },
+        {
+          "exists" : {
+            "field" : "card"
+          }
+        }
+      ],
+      "must_not" : [
+          {
+            "exists" : {
+              "field" : "id_ogr"
+            }
+          }
+        ]
+			}
+		}
+	}
+}

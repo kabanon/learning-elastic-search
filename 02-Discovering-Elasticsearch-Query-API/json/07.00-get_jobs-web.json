@@ -1,0 +1,19 @@
+{
+  "size": 10,
+  "query": {
+		"bool" : {
+      "must": [
+        {
+          "exists" : {
+            "field" : "id_ogr"
+          }
+        },
+        {
+          "term": {
+            "label": "web"
+          }
+        }
+      ]
+		}
+	}
+}
