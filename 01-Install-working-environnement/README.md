@@ -1,5 +1,4 @@
 # Learning Elasticsearch
-[<- Summary](../)
 ## Install docker
 ```bash
 #!/bin/bash

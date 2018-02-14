@@ -1,5 +1,4 @@
-# Discovering Elasticsearch
-
+# Learning Elasticsearch - Discovering Elasticsearch
 ## Requirements
 - Run Elasticsearch
 
